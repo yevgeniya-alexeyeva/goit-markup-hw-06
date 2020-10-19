@@ -37,6 +37,16 @@ input {
   font-family: inherit;
 }
 /*Components*/
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /*IE6, IE7 */
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -60,12 +70,12 @@ input {
   color: var(--hero-color);
   background-color: var(--accent-color);
   border: none;
+
+  border-radius: 4px;
+  cursor: pointer;
+  outline-color: var(--accent-color);
 }
-button, 
-button:active, 
-button:focus {
-    outline: none;
-}
+
 
 
 /* ==Header==*/
@@ -336,9 +346,6 @@ header {
   margin-right: auto;
   padding: 10px 32px;
 
-  cursor: pointer;
-
-  border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 /*List of benefits*/
@@ -620,6 +627,7 @@ header {
   color: var(--hero-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline-color: var(--accent-color);
 }
 /* Work list */
 .work-list {
@@ -771,13 +779,15 @@ header {
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  outline: inherit;
 }
 .close-icon {
-  fill: var(--title-color);
+  fill: var(--title-color); 
 }
 .close-button:hover .close-icon,
 .close-button:focus .close-icon {
   fill: var(--accent-color);
+  outline-color: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -815,6 +825,7 @@ header {
 .input-label {
   display: block;
   width: 100%;
+  margin-bottom: 10px;
 }
 .input-field {
   width: 100%;
@@ -824,6 +835,8 @@ header {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function), outline-color 250ms var(--timing-function);
 }
 .input-field:hover,
 .input-field:focus {
@@ -836,6 +849,7 @@ header {
   left: 12px;
   bottom: 11px;
   fill: var(--title-color);
+  transition: fill 250ms var(--timing-function);
 }
 
 .input-field:hover + .contact-form-icon{
@@ -849,7 +863,6 @@ header {
   resize: none;
 
   padding: 16px 12px;
-  margin-bottom: 20px;
 
   font-size: 14px;
   line-height: 1.143;
@@ -858,7 +871,9 @@ header {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline: none;
+  outline-color: var(--accent-color);
+
+  transition: border-color 250ms var(--timing-function), outline-color 250ms var(--timing-function);
 }
 .comment-field:hover,
 .comment-field:focus {
@@ -874,7 +889,9 @@ header {
   align-items: center;
   justify-content: center;
   width: 425px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 
 .agreement-capture {
@@ -895,12 +912,17 @@ header {
 .check-wraper {
   position: absolute;
   left: 0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 15px;
   box-sizing: border-box;
-  
+  border-color: #000000;
+  border: 2px solid #000000;
   border-radius: 2px;
+
+  transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 .check-icon {
   position: absolute;
@@ -913,10 +935,15 @@ header {
 }
 
 .checkbox:checked + .check-wraper {
+  border-color: transparent;
   background-color: var(--accent-color);
 }
-.checkbox:checked ~ .check-bg {
-  fill: var(--accent-color);
+.submit-bt {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
 }
+
+
 
 

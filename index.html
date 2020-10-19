@@ -68,7 +68,7 @@
       <!--List of benefits-->
       <section class="benefits-section">
         <div class="container">
-          <h2 hidden>Список преимуществ</h2>
+          <h2 class="visually-hidden">Список преимуществ</h2>
           <ul class="list benefits-list">
             <li class="benefits-items antenna">
               <div class="benefit-icon-bg">
@@ -414,7 +414,7 @@
           <b class="subscripe-capture">Подпишитесь на рассылку</b>
           <div class="input-container">
             <label>
-              <input type="mail" placeholder="E-mail" class="subscripe-input"></label>
+              <input type="mail" value="e-mail" placeholder="E-mail" class="subscripe-input"></label>
             <button type="submit" class="subcripe-button button">
               Подписаться<svg class="send-icon" width="24px" height="24px"><use  href="./image/symbol-defs-opt.svg#icon-send"></use>
             </svg></button></div>
@@ -424,7 +424,7 @@
     <!--Modal-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-button button" data-modal-close>
+        <button type="button" class="close-button" data-modal-close>
           <svg class="close-icon" width="18px" height="18px">
           <use href=./image/symbol-defs-opt.svg#close-black-18dp></use>
         </svg>
@@ -435,7 +435,7 @@
         <div class="input-wraper">
           <label class="input-label">
             <span class="input-capture">Имя</span>
-          <input type="text" name="name" class="input-field">
+          <input type="text" name="name" minlength="2" class="input-field">
           <svg width="18px" height="18px" class="contact-form-icon">
             <use href=./image/symbol-defs-opt.svg#person-black-18dp></use>
           </svg>
@@ -469,14 +469,13 @@
         <!--Agreement-->
         <label class="agreement-wrapper">
           <input type="checkbox" name="agreement" class="checkbox">
-          <span class="check-wraper"><svg width="16px" height="15px" class="check-icon">
+          <span class="check-wraper"><svg width="11px" height="8px" class="check-icon">
             <use href=./image/symbol-defs-opt.svg#icon-check></use>
           </svg>
-          <svg width="16px" height="15px" class="check-bg">
-            <use href=./image/symbol-defs-opt.svg#check-border></use>
-          </svg></span>
+          </span>
           <span class="agreement-capture">Соглашаюсь с рассылкой и принимаю</span>&nbsp;<a class="agreement-link" href="">Условия договора</a>
         </label>
+        <button type="submit" class="button submit-bt">Отправить</button>
       </form>
     </div>
   </div>
