@@ -847,7 +847,8 @@ header {
 .contact-form-icon {
   position: absolute;
   left: 12px;
-  bottom: 11px;
+  top: 50%;
+  transform: translateY(-50%);
   fill: var(--title-color);
   transition: fill 250ms var(--timing-function);
 }
