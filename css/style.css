@@ -932,7 +932,7 @@ header {
 .checkbox:checked + .agreement-wrapper::before {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url("./image/icons/checkbox-icon.svg");
+  background-image: url("../image/icons/.svg");
 }
 .submit-bt {
   margin-left: auto;
