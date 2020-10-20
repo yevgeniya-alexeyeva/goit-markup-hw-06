@@ -933,6 +933,8 @@ header {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   background-image: url("../image/icons/checkbox-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .submit-bt {
   margin-left: auto;
