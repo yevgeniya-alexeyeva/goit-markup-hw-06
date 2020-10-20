@@ -828,6 +828,7 @@ header {
   display: block;
   width: 100%;
   margin-bottom: 10px;
+  font-size: 12px;
 }
 .input-field {
   box-sizing: border-box;
@@ -864,6 +865,8 @@ header {
 }
 .comment-wraper {
   margin-bottom: 20px;
+
+  font-size: 12px;
 }
 .comment-field {
   width: 100%;
