@@ -910,17 +910,6 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.check-wraper {
-  position: absolute;
-  left: 0;
-  width: 16px;
-  height: 15px;
-  box-sizing: border-box;
- 
-  border-radius: 2px;
-
-  transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
-}
 
 .agreement-wrapper::before {
   display: inline-block;
@@ -931,6 +920,7 @@ header {
   height: 15px;
   border: 2px solid #000000;
   border-radius: 2px;
+  transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .checkbox {
