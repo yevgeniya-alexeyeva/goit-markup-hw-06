@@ -913,37 +913,43 @@ header {
 .check-wraper {
   position: absolute;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 16px;
   height: 15px;
   box-sizing: border-box;
-  border-color: #000000;
-  border: 2px solid #000000;
+ 
   border-radius: 2px;
 
   transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
-.check-icon {
+
+.agreement-wrapper::before {
+  display: inline-block;
+  content: "";
   position: absolute;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
 }
+
 .checkbox {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; 
 }
-
-.checkbox:checked + .check-wraper {
-  border-color: transparent;
+.checkbox:checked + .agreement-wrapper::before {
   background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url("./image/icons/checkbox-icon.svg");
 }
 .submit-bt {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 55px;
 }
+
 
 
 

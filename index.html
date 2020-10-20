@@ -467,12 +467,8 @@
           <textarea name="comment" rows="7" placeholder="Введите текст" class="comment-field"></textarea>
         </div>
         <!--Agreement-->
-        <label class="agreement-wrapper">
-          <input type="checkbox" name="agreement" class="checkbox">
-          <span class="check-wraper"><svg width="11px" height="8px" class="check-icon">
-            <use href=./image/symbol-defs-opt.svg#icon-check></use>
-          </svg>
-          </span>
+        <input type="checkbox" name="agreement" id="agreement-checkbox" class="checkbox">
+        <label for="agreement-checkbox" class="agreement-wrapper">
           <span class="agreement-capture">Соглашаюсь с рассылкой и принимаю</span>&nbsp;<a class="agreement-link" href="">Условия договора</a>
         </label>
         <button type="submit" class="button submit-bt">Отправить</button>
